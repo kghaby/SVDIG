@@ -2,7 +2,7 @@ README
 ==================================================
 PREFACE
 working directory must be get_structures
-this won't work if a chain has >1 characters or if a pdb has more than 26 chains or 9999 residues 
+this won't work if a chain has >1 characters or 9999 residues 
 this only downloads to first pdb to appear for each e value
 youll need internet connection, mafft (or any alignment software if not using the automated mafft alignment), at least bash3.2.57 (POSIX), python3 (modules below). Feh is not needed, but used
 python3 modules (pip3 lines for copy paste convenience)
