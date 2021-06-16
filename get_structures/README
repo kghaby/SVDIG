@@ -1,0 +1,39 @@
+README
+==================================================
+PREFACE
+working directory must be get_structures
+this won't work if a chain has >1 characters or if a pdb has more than 26 chains or 9999 residues 
+this only downloads to first pdb to appear for each e value
+
+youll need:
+internet connection, mafft (or any alignment software if not using the automated mafft alignment), at least bash3.2.57 (POSIX), python3 (modules below). Feh is not needed, but its called to display the plot. gnuplot is not needed for that matter, since you can just browse the output file that gnuplot is called to plot (the path will be printed to screen and log)
+python3 modules (pip3 lines for copy paste convenience)
+	pip3 install os
+	pip3 install biopython
+	pip3 install pdb-tools
+	pip3 install requests
+    pip3 install pandas
+-brew lines for mac ("brew install" is replaced by "sudo apt-get" for linux)
+	brew install gnuplot
+	brew install mafft
+
+note that using this script more than once every 10s or 100 times in 24hrs will get you temporarily blacklisted from BLAST
+    speaking of which, non-default blast parameters can be added in code/blast.py
+note that step files aim to overwrite, so you should change the names of anything you want to preserve in the $label directory if youre repeating steps for the same label.
+==================================================
+HOW TO USE
+	open and edit master.sh to assign variables 
+	run desired step* files (in order) (eg "./step1.sh")
+==================================================
+AUTOMATIC ALIGNMENT INFO (STEP 2 for whole pdbs and STEP 4 for n-mers)
+	currently selected mafft alg:
+		FFT-NS-2 algorithm 
+	to change settings:
+		open code/align_all.py
+		change arguments in 'mafft_cline = MafftCommandline("mafft", input="alignment.fasta")' 
+			settings in mafft section: https://biopython.org/docs/1.75/api/Bio.Align.Applications.html
+			eg 'mafft_cline = MafftCommandline("mafft-linsi", input="alignment.fasta")' for L-INS-i alg
+==================================================
+TO DO
+	implement $alltitles to get all pdbs for a matching seq
+==================================================
