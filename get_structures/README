@@ -20,6 +20,8 @@ python3 modules (pip3 lines for copy paste convenience)
 note that using this script more than once every 10s or 100 times in 24hrs will get you temporarily blacklisted from BLAST
     speaking of which, non-default blast parameters can be added in code/blast.py
 note that step files aim to overwrite, so you should change the names of anything you want to preserve in the $label directory if youre repeating steps for the same label.
+note that each step >1 uses a list file of PDB id's (ie the filename minus ".pdb"). If one wishes to discard a PDB from the proces
+s, delete the PDB from the list that is feeding into the next step.
 ==================================================
 HOW TO USE
 	open and edit master.sh to assign variables 
