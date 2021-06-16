@@ -26,8 +26,8 @@ label="mcm_test"
 
 #RELEVANT TO STEP 1
 #=========================
-fasta="fasta_bank/rcsb_pdb_3JA8_mcm2.fasta"
-        #eg. fasta_bank/rcsb_pdb_3JA8_mcm2.fasta will be blasted
+fasta="fasta_bank/example.fasta"
+        #eg. fasta_bank/example.fasta will be blasted
         #can only handle one sequence
         #need to be a file
 ethresh="10"
