@@ -1,2 +1,0 @@
-pdb-id	atoms	residues	chains
-3F9V_stndrd-cut_a	1341	272	1
