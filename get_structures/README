@@ -12,8 +12,8 @@ python3 modules (pip3 lines for copy paste convenience)
 	pip3 install biopython
 	pip3 install pdb-tools
 	pip3 install requests
-    pip3 install pandas
--brew lines for mac ("brew install" is replaced by "sudo apt-get" for linux)
+        pip3 install pandas
+brew lines for mac ("brew install" is replaced by "sudo apt-get" for linux)
 	brew install gnuplot
 	brew install mafft
 
@@ -38,4 +38,5 @@ AUTOMATIC ALIGNMENT INFO (STEP 3 for whole pdbs and STEP 5 for n-mers)
 ==================================================
 TO DO
 	implement $alltitles to get all pdbs for a matching seq
+	have step1 accept multiple chains in the ref fasta
 ==================================================
