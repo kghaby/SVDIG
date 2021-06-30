@@ -21,7 +21,7 @@ set -ae
 
 #RELEVANT TO ALL STEPS
 #=========================
-label="spike"
+label="example"
         #eg. label="example" will make dir example
         #use directory-appropriate formatting. also dont use spaces
 #=========================
