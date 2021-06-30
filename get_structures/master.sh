@@ -51,11 +51,15 @@ newethresh="1e-3"
 #RELEVANT TO STEP 3
 #=========================
 pdb_ref_id="3JA8"
-    #this is the name of the pdb file you wish to use, ie the name of the file minus ".pdb". 
-    #assuming youve done step 2, check $label/pdb_bank/aligned/pdb_list_standard_input.dat for the list of available pdb's. note that the name would be different from the four digit pdb id if there contained multiple models or lettered and numbered chain id's
-        #this is also an opportunity to manually remove from pdbs by either deleting them from pdb_bank/aligned or deleting the pdb's row in pdb_list_standard_input.dat  
+    #this is the name of the pdb file you wish to use, ie the name of the file minus ".pdb".
+    #assuming youve done step 2, check $label/pdb_bank/aligned/pdb_list_standard_input.dat for the list of pdb files from step 2. note that the name would be different from the four digit pdb id if there contained multiple models or lettered and numbered chain id's
+        #this is also an opportunity to manually remove from pdbs by either deleting them from pdb_bank/aligned or deleting the pdb's row in pdb_list_standard_input.dat
     #eg. pdb_ref_id="6M0J_ltr"
         #will use 6M0J_ltr.pdb
+    #if you want to use a pdb not made in step 2, place the pdb in $label/pdb_bank/aligned/. It wont be used in actual analysis as long as it isnt in pdb_list_standard_input.dat. Just make sure the file is named ${pdb_ref_id}.pdb and that the id is unique
+        #eg. pdb_ref_id="3JA8_A_reference"
+            #would cause the script to use $label/pdb_bank/aligned/3JA8_A_reference.pdb
+                #a reason you might want to do this is if you are only interested in one chain but all of the pdbs gathered in step 2 contain several chains. you could manually select a chain from a pdb (ideally one of the ones already parsed in $label/pdb_bank/aligned/) with something like pdb-tools, then point the script to that new pdb.
 #=========================
 
 #RELEVANT TO STEP 4
