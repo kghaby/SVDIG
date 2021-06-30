@@ -1,5 +1,6 @@
+#!/usr/bin/env python3
 import os
-#os.chdir("/Users/kyleghaby/Desktop/rice/svd/common/get_structures/mcm_test/pdb_bank/aligned")
+#os.chdir("")
 import sys
 import pandas as pd
 from Bio import pairwise2
