@@ -4,16 +4,16 @@ set -ae
 #EXAMPLE WORKFLOW
 #==================================================
 #step1.sh
-	#blast, output plot of e values
+    	#blast, output plot of e values
 #step2.sh
-	#download pdbs, separate models and numbered/lettered chains
+    	#download pdbs, separate models and numbered/lettered chains
 #step3.sh
-    #standardize chains, get sequences, align sequences
+    	#standardize chains, get sequences, align sequences
 #step4.sh
-	#cut pdbs and separate into n-mers
+    	#cut pdbs and separate into n-mers
 #step5.sh 
-    #fill gaps to make all pdbs have the same number of residues (and atoms if only backbone atoms are kept)
-    #only keeps atoms specified
+    	#fill gaps to make all pdbs have the same number of residues (and atoms if only backbone atoms are kept)
+    	#only keeps atoms specified
 #==================================================
 
 #VARIABLES
