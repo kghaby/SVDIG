@@ -73,7 +73,7 @@ if [ $fontsize -ge 11 ]; then
 fi
 if [ $fontsize -le 7 ]; then
 	echo "changing fontsize from $fontsize to 8." 2>&1 | tee -a $log
-	newxres=$(($((8-$fontsize)) * 200 + $xres))
+	newxres=$(($((8-$fontsize)) * 400 + $xres))
 	fontsize=8
 	echo "	To compensate, changing plot length from $xres to $newxres" 2>&1 | tee -a $log
 	xres=$newxres
