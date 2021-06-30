@@ -39,4 +39,31 @@ AUTOMATIC ALIGNMENT INFO (STEP 3 for whole pdbs and STEP 5 for n-mers)
 TO DO
 	implement $alltitles to get all pdbs for a matching seq
 	have step1 accept multiple chains in the ref fasta
+	automatically notify instances of double atoms at the end of step5 using the bit in test.ipynb. 
+		example lines:
+			ATOM    706  CA AGLN A 177     -39.920  30.982   7.452  0.50 62.36           C
+			ATOM    707  CA BGLN A 177     -39.896  30.974   7.447  0.50 62.37           C
+		Apply to all and expand:
+			#!/usr/bin/env python3
+			#checking residues with more atoms than expected (4 for backbone)
+			import os
+			import sys
+			pdbid = os.environ["id"] #"../spike/pdb_bank/equal_atoms/1-mer/6M0J_stndrd_A_withgaps" 
+			pdbf = pdbid+".pdb"
+			pdbfh = open(pdbf, 'r')
+			prev_res=None
+			count=1
+			for line in pdbfh:
+			    if line.startswith('ATOM'):
+				if line[22:26] != prev_res:
+				    count=1
+				if line[22:26] == prev_res:
+				    count=count+1
+				    if count > 4:
+					print(line[22:26])
+				prev_res=line[22:26]
+				
+		OR dont let the user choose, and choose arbitrarily choose A
+
+
 ==================================================
