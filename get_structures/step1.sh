@@ -99,7 +99,7 @@ gnuplot -persist << EOF
 	@BMARGIN; @SIDEMARGIN
 	plot "blast_files/evalues_$label.dat" u 2:xtic(1) w lp lt 1 pt 31 notitle
 EOF
-set +e;feh -qF blast_files/evalues_$label.png & echo "blast_files/evalues_$label.png should be displayed if you have feh" 
+set +e;feh -qF blast_files/evalues_$label.png & echo "$label/blast_files/evalues_$label.png should be displayed if you have feh" 
 set -e
 footer plotted
 
