@@ -27,7 +27,7 @@ HOW TO USE
 	open and edit master.sh to assign variables 
 	run desired step* files (in order) (eg "./step1.sh")
 ==================================================
-AUTOMATIC ALIGNMENT INFO (STEP 2 for whole pdbs and STEP 4 for n-mers)
+AUTOMATIC ALIGNMENT INFO (STEP 3 for whole pdbs and STEP 5 for n-mers)
 	currently selected mafft alg:
 		FFT-NS-2 algorithm 
 	to change settings:
