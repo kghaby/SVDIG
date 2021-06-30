@@ -54,7 +54,7 @@ done
 #rename chains based on homology
 mkdir -p {standard_in,standard_out}
 printf '\n'
-echo "standardizing chains according to $pdb_ref_id" 2>&1 | tee -a ../../../$log
+echo "standardizing chains according to $pdb_ref_id" 2>&1 | tee -a ../../$log
 cd standard_in
 mv ../pdb_list_standard_input.dat .
 mv ../*.pdb .
