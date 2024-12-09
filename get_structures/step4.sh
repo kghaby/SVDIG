@@ -1,6 +1,6 @@
 #!/bin/bash
 set -ea; trap 'echo "Mission failed, we'"'"'ll get line $LINENO next time."' ERR
-source master.sh
+source main.sh
 
 #MAIN
 #==================================================
